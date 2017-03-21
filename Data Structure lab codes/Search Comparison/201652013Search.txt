@@ -1,0 +1,33 @@
+Objecttive:To Compare The time complexities of Linear Search and Binary Search over a different range of inputs.
+
+System Configuration:
+		Memory: 3.6GiB
+		Processor:Intel® Core™ i5-4590 CPU @ 3.30GHz × 4
+		Graphics:Intel® Haswell Desktop 
+		OS-type:64-bit
+		Disk Size:474.3 GB
+
+Input Description:
+1. 100 number of inputs ranging from 1000-2000 and 50 elements searched.
+2. 500 number of inputs ranging from 5000-6000 and 250 elements searched.
+3. 1000 number of inputs ranging from 10000-12000 and 500 elements searched.
+4. 2000 number of inputs ranging from 20000-24000 and 1000 elements searched.
+
+Algorithm:
+
+
+Observation table:
+
+||========================================================================================================================================||
+||Number of Inputs		||Range		||Searched on	||	BinarySearch		  ||      LinearSearch			  ||
+||==========================================================================================================================================
+||XXXXXXXXXXXXXXXXXXXXXXXXXXXXXX||XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX  ||
+||==========================================================================================================================================
+||100				||1000-1200	||50		||	302.54nano seconds	  ||	1656.2nano seconds		  ||
+||==========================================================================================================================================
+||500				||5000-6000	||250		||	329.992nano seconds	  ||	2023.70nano seconds		  ||
+||==========================================================================================================================================
+||1000				||10000-12000	||500		||	367.046nano seconds	  ||	3108.774nano seconds		  ||
+||==========================================================================================================================================
+||2000				||20000-24000	||1000		||	406.078nano seconds	  ||	5597.012nano seconds		  ||
+||========================================================================================================================================||
