@@ -1,8 +1,8 @@
 #include"bits/stdc++.h"
 #include<stdio.h>
- 
+
 using namespace std;
- 
+
 int main()
 {
     int tc;
@@ -14,7 +14,7 @@ int main()
         float b1 = (float) b;
         float rt = (float) p;
         float bt = r1 + b1 - rt;
- 
+
         float ans = (r1*rt) + (b1*bt);
         ans = ans / (r1+b1);
         printf("%.10lf\n",ans);

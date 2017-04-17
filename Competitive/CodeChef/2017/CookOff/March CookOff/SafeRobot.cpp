@@ -1,8 +1,8 @@
 #include"bits/stdc++.h"
 #include<stdio.h>
- 
+
 using namespace std;
- 
+
 int main()
 {
     int tc;
@@ -13,7 +13,7 @@ int main()
         string s;
         scanf("%d%d",&n,&m);
         cin>>s;
- 
+
         for(int i=0;i<n;i++) {
             for(int j=0;j<m;j++) {
                     int ci=i,cj=j,k;

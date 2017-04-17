@@ -2,7 +2,7 @@
 #include"bits/stdc++.h"
 #define ll long long int
 using namespace std;
- 
+
 ll CeilIndex(std::vector<ll> &v, ll l, ll r, ll key)
 {
     while (r-l > 1) {
@@ -12,17 +12,17 @@ ll CeilIndex(std::vector<ll> &v, ll l, ll r, ll key)
     else
         l = m;
     }
- 
+
     return r;
 }
- 
+
 ll LongestIncreasingSubsequenceLength(std::vector<ll> &v) {
     if (v.size() == 0)
         return 0;
- 
+
     std::vector<ll> tail(v.size(), 0);
     int length = 1; // always points empty slot in tail
- 
+
     tail[0] = v[0];
     for (size_t i = 1; i < v.size(); i++) {
         if (v[i] < tail[0])
@@ -37,12 +37,12 @@ ll LongestIncreasingSubsequenceLength(std::vector<ll> &v) {
             // (and also, v[i] would have already appeared in one of LIS, identify the location and replace it)
             tail[CeilIndex(tail, -1, length-1, v[i])] = v[i];
     }
- 
+
     return length;
 }
- 
+
 int main()
- 
+
 {
     std::ios::sync_with_stdio(false);
     int t;

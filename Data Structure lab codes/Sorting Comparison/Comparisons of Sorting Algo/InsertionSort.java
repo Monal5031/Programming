@@ -15,23 +15,23 @@ class InsertionSort
         }
     }
 public static void main(String [] args)throws Exception
-	{
-	int n=2000;
-	int []arr=new int[n];
-	long start=System.currentTimeMillis() % 1000;
-	Read(arr);
-	insertionSort(arr);
-	long end=System.currentTimeMillis() % 1000;
-		long total=end-start;
-		System.out.println("Execution time: "+total+"milli seconds");
-	}
+    {
+    int n=2000;
+    int []arr=new int[n];
+    long start=System.currentTimeMillis() % 1000;
+    Read(arr);
+    insertionSort(arr);
+    long end=System.currentTimeMillis() % 1000;
+        long total=end-start;
+        System.out.println("Execution time: "+total+"milli seconds");
+    }
 public static void Read(int arr[])throws Exception
-		{
-		int i=0;
-		Scanner in = new Scanner(new FileReader("/home/student/Desktop/MONAL/Data Structure/Input Files/InputFile10.txt"));
-		while (in.hasNext()) 
-			{ arr[i]=in.nextInt(); }
-		in.close();
-		}
+        {
+        int i=0;
+        Scanner in = new Scanner(new FileReader("/home/student/Desktop/MONAL/Data Structure/Input Files/InputFile10.txt"));
+        while (in.hasNext())
+            { arr[i]=in.nextInt(); }
+        in.close();
+        }
 
 }

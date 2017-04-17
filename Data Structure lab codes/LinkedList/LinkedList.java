@@ -8,24 +8,24 @@
         {
             next= null;
             data = 0;
-        }    
+        }
         public Node(int d,Node n)
         {
             data = d;
             next = n;
-        }    
+        }
         public void setLink(Node n)
         {
             next = n;
-        }    
+        }
         public void setData(int d)
         {
             data = d;
-        }    
+        }
         public Node getLink()
         {
             return next;
-        }    
+        }
         public int getData()
         {
             return data;
@@ -51,18 +51,18 @@
         public int getSize()
         {
             return size;
-        }    
+        }
 
         public void addToStart(int val)
         {
-            Node nptr = new Node(val, null);    
-            size++ ;    
-            if(start == null) 
+            Node nptr = new Node(val, null);
+            size++ ;
+            if(start == null)
             {
                 start = nptr;
                 end = start;
             }
-            else 
+            else
             {
                 nptr.setLink(start);
                start = nptr;
@@ -71,14 +71,14 @@
 
         public void addToEnd(int val)
         {
-           Node nptr = new Node(val,null);    
-            size++ ;    
-            if(start == null) 
+           Node nptr = new Node(val,null);
+            size++ ;
+            if(start == null)
             {
                 start = nptr;
                 end = start;
             }
-            else 
+            else
             {
                 end.setLink(nptr);
                 end = nptr;
@@ -87,12 +87,12 @@
 
         public void add(int val , int pos)
         {
-            Node nptr = new Node(val, null);                
+            Node nptr = new Node(val, null);
             Node ptr = start;
             pos = pos - 1 ;
-            for (int i = 0; i < size; i++) 
+            for (int i = 0; i < size; i++)
             {
-                if (i == pos) 
+                if (i == pos)
                 {
                     Node tmp = ptr.getLink() ;
                     ptr.setLink(nptr);
@@ -105,14 +105,14 @@
         }
 
         public void delete(int pos)
-        {        
-            if (pos == 1) 
+        {
+            if (pos == 1)
             {
                 start = start.getLink();
-                size--; 
+                size--;
                 return ;
             }
-            if (pos == size) 
+            if (pos == size)
             {
                 Node s = start;
                 Node t = start;
@@ -133,11 +133,11 @@
 
             pos = pos - 1 ;
 
-            for (int i = 0; i < size-1 ; i++) 
+            for (int i = 0; i < size-1 ; i++)
 
             {
 
-                if (i == pos) 
+                if (i == pos)
 
                 {
 
@@ -157,7 +157,7 @@
 
             size-- ;
 
-        }    
+        }
 
         /*  Function to display elements  */
 
@@ -167,7 +167,7 @@
 
             System.out.print("\nLinked List = ");
 
-            if (size == 0) 
+            if (size == 0)
 
             {
 
@@ -175,9 +175,9 @@
 
                 return;
 
-            }    
+            }
 
-            if (start.getLink() == null) 
+            if (start.getLink() == null)
 
             {
 
@@ -211,19 +211,19 @@
 
     public class LinkedList
 
-    {    
+    {
 
         public static void main(String[] args)
 
-        {             
+        {
 
             Scanner scan = new Scanner(System.in);
 
             /* Creating object of class linkedList */
 
-            linkedList list = new linkedList(); 
+            linkedList list = new linkedList();
 
-            System.out.println("Linked List Test\n");          
+            System.out.println("Linked List Test\n");
 
             char ch;
 
@@ -245,31 +245,31 @@
 
                 System.out.println("5. check empty");
 
-                System.out.println("6. get size");            
+                System.out.println("6. get size");
 
-                int choice = scan.nextInt();            
+                int choice = scan.nextInt();
 
                 switch (choice)
 
                 {
 
-                case 1 : 
+                case 1 :
 
                     System.out.println("Enter integer element to insert");
 
-                    list.addToStart( scan.nextInt() );                     
+                    list.addToStart( scan.nextInt() );
 
-                    break;                          
+                    break;
 
-                case 2 : 
+                case 2 :
 
                     System.out.println("Enter integer element to insert");
 
-                    list.addToEnd( scan.nextInt() );                     
+                    list.addToEnd( scan.nextInt() );
 
-                    break;                         
+                    break;
 
-                case 3 : 
+                case 3 :
 
                     System.out.println("Enter integer element to insert");
 
@@ -287,9 +287,9 @@
 
                         list.add(num, pos);
 
-                    break;                                          
+                    break;
 
-                case 4 : 
+                case 4 :
 
                     System.out.println("Enter position");
 
@@ -305,35 +305,35 @@
 
                     break;
 
-                case 5 : 
+                case 5 :
 
                     System.out.println("Empty status = "+ list.isEmpty());
 
-                    break;                   
+                    break;
 
-                case 6 : 
+                case 6 :
 
                     System.out.println("Size = "+ list.getSize() +" \n");
 
-                    break;                         
+                    break;
 
-                 default : 
+                 default :
 
                     System.out.println("Wrong Entry \n ");
 
-                    break;   
+                    break;
 
                 }
 
-                /*  Display List  */ 
+                /*  Display List  */
 
                 list.display();
 
                 System.out.println("\nDo you want to continue (Type y or n) \n");
 
-                ch = scan.next().charAt(0);                        
+                ch = scan.next().charAt(0);
 
-            } while (ch == 'Y'|| ch == 'y');               
+            } while (ch == 'Y'|| ch == 'y');
 
         }
 

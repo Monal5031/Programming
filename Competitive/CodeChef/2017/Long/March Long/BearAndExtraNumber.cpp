@@ -1,11 +1,11 @@
 #include"bits/stdc++.h"
 #include<stdio.h>
- 
+
 #define ll long long int
 #define l long int
 using namespace std;
- 
- 
+
+
 int main()
 {
     int tc;

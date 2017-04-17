@@ -3,11 +3,11 @@
 #define ll long long int
 #define l long int
 using namespace std;
- 
+
 bool checkBase(ll n,ll b) // To check if the leading bit in bth base is 1
 {
     int digit=0;
- 
+
     while(n/b>0)
         n/=b;
     digit=n%b;
@@ -16,7 +16,7 @@ bool checkBase(ll n,ll b) // To check if the leading bit in bth base is 1
     else
         return false;
 }
- 
+
 int main()
 {
     std::ios::sync_with_stdio(false);
