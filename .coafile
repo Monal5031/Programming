@@ -2,4 +2,27 @@
 files = **/*.*
 bears = SpaceConsistencyBear
 use_spaces = True
-no_orig = True
+
+[PEP8]
+files = **/*.*
+bears = PEP8Bear
+
+[CPP]
+files = **/*.cpp
+bears = CPPLintBear
+
+[Markdown Files]
+files = *.md, **/*.md
+bears = MarkdownBear
+
+[C]
+files = **/*.c
+bears =
+
+[Python]
+files = **/*.py
+bears = PyLintBear, PyUnusedCodeBear
+
+[Java]
+files = **/*.java
+bears = JavaPMDBear

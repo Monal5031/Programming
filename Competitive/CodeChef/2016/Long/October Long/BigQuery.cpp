@@ -1,12 +1,12 @@
     // This question is still partially solved
 
-    #include <iostream>
-    #define ll long long int
-    using namespace std;
+    # include <iostream>
+    # define ll long long int
+    using namespace std
     int main()
     {
-        std::ios::sync_with_stdio(false);
-        int t,n,m,number,x,l,r,y;
+        std:: ios: : sync_with_stdio(false);
+        int t, n, m, number, x, l, r, y;
         ll product = 1;
         ll sum = 0;
         cin >> t;
@@ -16,63 +16,53 @@
             product = 1;
             cin >> n >> m;
             int arr[n];
-            for(int i = 0; i < n; ++i)
+            for(int i=0; i < n; ++i)
             {
-                cin >> arr[i];
-            }
-            for(int i = 0; i < m; ++i)
+                cin >> arr[i]; }
+            for(int i=0; i < m; ++i)
             {
-                /*for(int k = 0; k < n; ++k)
+                / *for(int k=0; k < n; ++k)
                 {
-                    cout << arr[k] << endl;
-                }*/
+                    cout << arr[k] << endl; }*/
                 cin >> number;
                 if(number == 1)
                 {
                     cin >> l >> r >> x;
-                    for(int j = l-1; j < r; ++j)
+                    for(int j=l-1; j < r; ++j)
                     {
-                        arr[j] *= x;
-                    }
+                        arr[j] *= x; }
                 }
                 else if(number == 2)
                 {
                     cin >> l >> r >> y;
-                    for(int j = l-1; j < r; ++j)
+                    for(int j=l-1; j < r; ++j)
                     {
-                        arr[j] = (j-l+2)*y;
-                    }
+                        arr[j] = (j-l+2)*y; }
                 }
                 else
                 {
                     product = 1;
                     cin >> l >> r;
-                    //cout << l-1 << " " << r-1 << endl;
-                    for(int j = l-1; j < r; ++j)
+                    // cout << l-1 << " " << r-1 << endl;
+                    for(int j=l-1; j < r; ++j)
                     {
-                        //cout << arr[j] << endl;
-                        product = product*arr[j];
-                    }
-                    //cout << product << endl;
-                }
+                        // cout << arr[j] << endl;
+                        product = product*arr[j]; }
+                    // cout << product << endl;}
                 if(product != 1)
                 {
                     int q = 0;
                     while(true)
                     {
-                        q = product%10;
+                        q = product % 10;
                         if(q == 0)
                         {
-                            sum++;
-                        }
+                            sum++; }
                         else
                         {
-                            break;
-                        }
-                        product = product/10;
-                    }
+                            break; }
+                        product = product/10; }
                 }
             }
-            cout << sum << endl;
-        }
+            cout << sum << endl; }
     }

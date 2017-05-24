@@ -1,47 +1,55 @@
-import java.io.*;
-import java.lang.*;
-import java.util.*;
+import java.io.*
+import java.lang.*
+import java.util.*
+
 
 class CreateFile
     {
-    private Formatter x;
+        private Formatter x
 
-    public void openFile()
+        public void openFile()
         {
-        try
+            try
             {
-            x=new Formatter("/home/student/Desktop/MONAL/Data Structure/Input Files/InputFile11.txt");
+                x = new Formatter("/home/student/Desktop/MONAL/Data Structure/Input Files/InputFile11.txt")
             }
-        catch(Exception e)
+            catch(Exception e)
             {
-            System.out.println("GOt an error");
-            }
+                System.out.println("GOt an error")
+                }
         }
 
-    public void addRecords()
+        public void addRecords()
         {
-        Random obj=new Random();
-        int[] tmp=new int[14];
-        for(int i=0;i<14;i++)
-            tmp[i]=1+obj.nextInt(1000000);
-        for(int i=0;i<2000;i++)
+            Random obj = new Random()
+            int[] tmp = new int[14]
+            for(int i=0
+                i < 14
+                i++)
+            tmp[i] = 1+obj.nextInt(1000000)
+            for(int i=0
+                i < 2000
+                i++)
             {
-            x.format("%d\n",tmp[obj.nextInt(14)]);  //x.format(format,args);
-            }
+                x.format("%d\n", tmp[obj.nextInt(14)])
+                // x.format(format, args)
+                }
         }
 
-    public void closeFile()
+        public void closeFile()
         {
-        x.close();
-        }
+            x.close()
+            }
     }
+
+
 public class UnsortRepeated
     {
-    public static void main(String[] args)
+        public static void main(String[] args)
         {
-        CreateFile g=new CreateFile();
-        g.openFile();
-        g.addRecords();
-        g.closeFile();
-        }
+            CreateFile g = new CreateFile()
+            g.openFile()
+            g.addRecords()
+            g.closeFile()
+            }
     }
