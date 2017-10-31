@@ -75,4 +75,4 @@ on_failure:
   - codecov
 
 matrix:
-fast_finish: true
+  fast_finish: true
